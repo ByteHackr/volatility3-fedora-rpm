@@ -1,0 +1,877 @@
+
+setting SOURCE_DATE_EPOCH=1638489600
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.L309H9
++ umask 022
++ cd /home/sandipan/Desktop/fedora/volatility3-fedora-rpm
++ cd /home/sandipan/Desktop/fedora/volatility3-fedora-rpm
++ rm -rf volatility3-1.0.1
++ /usr/bin/gzip -dc /home/sandipan/Desktop/fedora/volatility3-fedora-rpm/volatility3-1.0.1.tar.gz
++ /usr/bin/tar -xof -
++ STATUS=0
++ '[' 0 -ne 0 ']'
++ cd volatility3-1.0.1
++ /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
++ RPM_EC=0
+++ jobs -p
++ exit 0
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.ZmC2pV
++ umask 022
++ cd /home/sandipan/Desktop/fedora/volatility3-fedora-rpm
++ cd volatility3-1.0.1
++ CFLAGS='-O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -m64  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection'
++ LDFLAGS='-Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 '
++ /usr/bin/python3 setup.py build '--executable=/usr/bin/python3 -s'
+running build
+running build_py
+creating build
+creating build/lib
+creating build/lib/volatility3
+copying volatility3/__init__.py -> build/lib/volatility3
+creating build/lib/volatility3/cli
+copying volatility3/cli/__init__.py -> build/lib/volatility3/cli
+copying volatility3/cli/text_renderer.py -> build/lib/volatility3/cli
+copying volatility3/cli/volargparse.py -> build/lib/volatility3/cli
+creating build/lib/volatility3/framework
+copying volatility3/framework/__init__.py -> build/lib/volatility3/framework
+copying volatility3/framework/exceptions.py -> build/lib/volatility3/framework
+creating build/lib/volatility3/plugins
+copying volatility3/plugins/__init__.py -> build/lib/volatility3/plugins
+creating build/lib/volatility3/schemas
+copying volatility3/schemas/__init__.py -> build/lib/volatility3/schemas
+creating build/lib/volatility3/symbols
+copying volatility3/symbols/__init__.py -> build/lib/volatility3/symbols
+creating build/lib/volatility3/cli/volshell
+copying volatility3/cli/volshell/__init__.py -> build/lib/volatility3/cli/volshell
+copying volatility3/cli/volshell/generic.py -> build/lib/volatility3/cli/volshell
+copying volatility3/cli/volshell/linux.py -> build/lib/volatility3/cli/volshell
+copying volatility3/cli/volshell/mac.py -> build/lib/volatility3/cli/volshell
+copying volatility3/cli/volshell/windows.py -> build/lib/volatility3/cli/volshell
+creating build/lib/volatility3/framework/automagic
+copying volatility3/framework/automagic/__init__.py -> build/lib/volatility3/framework/automagic
+copying volatility3/framework/automagic/construct_layers.py -> build/lib/volatility3/framework/automagic
+copying volatility3/framework/automagic/linux.py -> build/lib/volatility3/framework/automagic
+copying volatility3/framework/automagic/mac.py -> build/lib/volatility3/framework/automagic
+copying volatility3/framework/automagic/pdbscan.py -> build/lib/volatility3/framework/automagic
+copying volatility3/framework/automagic/stacker.py -> build/lib/volatility3/framework/automagic
+copying volatility3/framework/automagic/symbol_cache.py -> build/lib/volatility3/framework/automagic
+copying volatility3/framework/automagic/symbol_finder.py -> build/lib/volatility3/framework/automagic
+copying volatility3/framework/automagic/windows.py -> build/lib/volatility3/framework/automagic
+creating build/lib/volatility3/framework/configuration
+copying volatility3/framework/configuration/__init__.py -> build/lib/volatility3/framework/configuration
+copying volatility3/framework/configuration/requirements.py -> build/lib/volatility3/framework/configuration
+creating build/lib/volatility3/framework/constants
+copying volatility3/framework/constants/__init__.py -> build/lib/volatility3/framework/constants
+creating build/lib/volatility3/framework/contexts
+copying volatility3/framework/contexts/__init__.py -> build/lib/volatility3/framework/contexts
+creating build/lib/volatility3/framework/interfaces
+copying volatility3/framework/interfaces/__init__.py -> build/lib/volatility3/framework/interfaces
+copying volatility3/framework/interfaces/automagic.py -> build/lib/volatility3/framework/interfaces
+copying volatility3/framework/interfaces/configuration.py -> build/lib/volatility3/framework/interfaces
+copying volatility3/framework/interfaces/context.py -> build/lib/volatility3/framework/interfaces
+copying volatility3/framework/interfaces/layers.py -> build/lib/volatility3/framework/interfaces
+copying volatility3/framework/interfaces/objects.py -> build/lib/volatility3/framework/interfaces
+copying volatility3/framework/interfaces/plugins.py -> build/lib/volatility3/framework/interfaces
+copying volatility3/framework/interfaces/renderers.py -> build/lib/volatility3/framework/interfaces
+copying volatility3/framework/interfaces/symbols.py -> build/lib/volatility3/framework/interfaces
+creating build/lib/volatility3/framework/layers
+copying volatility3/framework/layers/__init__.py -> build/lib/volatility3/framework/layers
+copying volatility3/framework/layers/crash.py -> build/lib/volatility3/framework/layers
+copying volatility3/framework/layers/elf.py -> build/lib/volatility3/framework/layers
+copying volatility3/framework/layers/intel.py -> build/lib/volatility3/framework/layers
+copying volatility3/framework/layers/lime.py -> build/lib/volatility3/framework/layers
+copying volatility3/framework/layers/linear.py -> build/lib/volatility3/framework/layers
+copying volatility3/framework/layers/msf.py -> build/lib/volatility3/framework/layers
+copying volatility3/framework/layers/physical.py -> build/lib/volatility3/framework/layers
+copying volatility3/framework/layers/qemu.py -> build/lib/volatility3/framework/layers
+copying volatility3/framework/layers/registry.py -> build/lib/volatility3/framework/layers
+copying volatility3/framework/layers/resources.py -> build/lib/volatility3/framework/layers
+copying volatility3/framework/layers/segmented.py -> build/lib/volatility3/framework/layers
+copying volatility3/framework/layers/vmware.py -> build/lib/volatility3/framework/layers
+creating build/lib/volatility3/framework/objects
+copying volatility3/framework/objects/__init__.py -> build/lib/volatility3/framework/objects
+copying volatility3/framework/objects/templates.py -> build/lib/volatility3/framework/objects
+copying volatility3/framework/objects/utility.py -> build/lib/volatility3/framework/objects
+creating build/lib/volatility3/framework/plugins
+copying volatility3/framework/plugins/__init__.py -> build/lib/volatility3/framework/plugins
+copying volatility3/framework/plugins/banners.py -> build/lib/volatility3/framework/plugins
+copying volatility3/framework/plugins/configwriter.py -> build/lib/volatility3/framework/plugins
+copying volatility3/framework/plugins/frameworkinfo.py -> build/lib/volatility3/framework/plugins
+copying volatility3/framework/plugins/isfinfo.py -> build/lib/volatility3/framework/plugins
+copying volatility3/framework/plugins/layerwriter.py -> build/lib/volatility3/framework/plugins
+copying volatility3/framework/plugins/timeliner.py -> build/lib/volatility3/framework/plugins
+copying volatility3/framework/plugins/yarascan.py -> build/lib/volatility3/framework/plugins
+creating build/lib/volatility3/framework/renderers
+copying volatility3/framework/renderers/__init__.py -> build/lib/volatility3/framework/renderers
+copying volatility3/framework/renderers/conversion.py -> build/lib/volatility3/framework/renderers
+copying volatility3/framework/renderers/format_hints.py -> build/lib/volatility3/framework/renderers
+creating build/lib/volatility3/framework/symbols
+copying volatility3/framework/symbols/__init__.py -> build/lib/volatility3/framework/symbols
+copying volatility3/framework/symbols/intermed.py -> build/lib/volatility3/framework/symbols
+copying volatility3/framework/symbols/metadata.py -> build/lib/volatility3/framework/symbols
+copying volatility3/framework/symbols/native.py -> build/lib/volatility3/framework/symbols
+copying volatility3/framework/symbols/wrappers.py -> build/lib/volatility3/framework/symbols
+creating build/lib/volatility3/framework/constants/linux
+copying volatility3/framework/constants/linux/__init__.py -> build/lib/volatility3/framework/constants/linux
+creating build/lib/volatility3/framework/constants/windows
+copying volatility3/framework/constants/windows/__init__.py -> build/lib/volatility3/framework/constants/windows
+creating build/lib/volatility3/framework/layers/codecs
+copying volatility3/framework/layers/codecs/__init__.py -> build/lib/volatility3/framework/layers/codecs
+creating build/lib/volatility3/framework/layers/scanners
+copying volatility3/framework/layers/scanners/__init__.py -> build/lib/volatility3/framework/layers/scanners
+copying volatility3/framework/layers/scanners/multiregexp.py -> build/lib/volatility3/framework/layers/scanners
+creating build/lib/volatility3/framework/plugins/linux
+copying volatility3/framework/plugins/linux/__init__.py -> build/lib/volatility3/framework/plugins/linux
+copying volatility3/framework/plugins/linux/bash.py -> build/lib/volatility3/framework/plugins/linux
+copying volatility3/framework/plugins/linux/check_afinfo.py -> build/lib/volatility3/framework/plugins/linux
+copying volatility3/framework/plugins/linux/check_creds.py -> build/lib/volatility3/framework/plugins/linux
+copying volatility3/framework/plugins/linux/check_idt.py -> build/lib/volatility3/framework/plugins/linux
+copying volatility3/framework/plugins/linux/check_modules.py -> build/lib/volatility3/framework/plugins/linux
+copying volatility3/framework/plugins/linux/check_syscall.py -> build/lib/volatility3/framework/plugins/linux
+copying volatility3/framework/plugins/linux/elfs.py -> build/lib/volatility3/framework/plugins/linux
+copying volatility3/framework/plugins/linux/keyboard_notifiers.py -> build/lib/volatility3/framework/plugins/linux
+copying volatility3/framework/plugins/linux/lsmod.py -> build/lib/volatility3/framework/plugins/linux
+copying volatility3/framework/plugins/linux/lsof.py -> build/lib/volatility3/framework/plugins/linux
+copying volatility3/framework/plugins/linux/malfind.py -> build/lib/volatility3/framework/plugins/linux
+copying volatility3/framework/plugins/linux/proc.py -> build/lib/volatility3/framework/plugins/linux
+copying volatility3/framework/plugins/linux/pslist.py -> build/lib/volatility3/framework/plugins/linux
+copying volatility3/framework/plugins/linux/pstree.py -> build/lib/volatility3/framework/plugins/linux
+copying volatility3/framework/plugins/linux/tty_check.py -> build/lib/volatility3/framework/plugins/linux
+creating build/lib/volatility3/framework/plugins/mac
+copying volatility3/framework/plugins/mac/__init__.py -> build/lib/volatility3/framework/plugins/mac
+copying volatility3/framework/plugins/mac/bash.py -> build/lib/volatility3/framework/plugins/mac
+copying volatility3/framework/plugins/mac/check_syscall.py -> build/lib/volatility3/framework/plugins/mac
+copying volatility3/framework/plugins/mac/check_sysctl.py -> build/lib/volatility3/framework/plugins/mac
+copying volatility3/framework/plugins/mac/check_trap_table.py -> build/lib/volatility3/framework/plugins/mac
+copying volatility3/framework/plugins/mac/ifconfig.py -> build/lib/volatility3/framework/plugins/mac
+copying volatility3/framework/plugins/mac/kauth_listeners.py -> build/lib/volatility3/framework/plugins/mac
+copying volatility3/framework/plugins/mac/kauth_scopes.py -> build/lib/volatility3/framework/plugins/mac
+copying volatility3/framework/plugins/mac/kevents.py -> build/lib/volatility3/framework/plugins/mac
+copying volatility3/framework/plugins/mac/list_files.py -> build/lib/volatility3/framework/plugins/mac
+copying volatility3/framework/plugins/mac/lsmod.py -> build/lib/volatility3/framework/plugins/mac
+copying volatility3/framework/plugins/mac/lsof.py -> build/lib/volatility3/framework/plugins/mac
+copying volatility3/framework/plugins/mac/malfind.py -> build/lib/volatility3/framework/plugins/mac
+copying volatility3/framework/plugins/mac/mount.py -> build/lib/volatility3/framework/plugins/mac
+copying volatility3/framework/plugins/mac/netstat.py -> build/lib/volatility3/framework/plugins/mac
+copying volatility3/framework/plugins/mac/proc_maps.py -> build/lib/volatility3/framework/plugins/mac
+copying volatility3/framework/plugins/mac/psaux.py -> build/lib/volatility3/framework/plugins/mac
+copying volatility3/framework/plugins/mac/pslist.py -> build/lib/volatility3/framework/plugins/mac
+copying volatility3/framework/plugins/mac/pstree.py -> build/lib/volatility3/framework/plugins/mac
+copying volatility3/framework/plugins/mac/socket_filters.py -> build/lib/volatility3/framework/plugins/mac
+copying volatility3/framework/plugins/mac/timers.py -> build/lib/volatility3/framework/plugins/mac
+copying volatility3/framework/plugins/mac/trustedbsd.py -> build/lib/volatility3/framework/plugins/mac
+copying volatility3/framework/plugins/mac/vfsevents.py -> build/lib/volatility3/framework/plugins/mac
+creating build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/__init__.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/bigpools.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/cachedump.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/callbacks.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/cmdline.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/dlllist.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/driverirp.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/driverscan.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/dumpfiles.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/envars.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/filescan.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/getservicesids.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/getsids.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/handles.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/hashdump.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/info.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/lsadump.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/malfind.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/memmap.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/modscan.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/modules.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/mutantscan.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/netscan.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/poolscanner.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/privileges.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/pslist.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/psscan.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/pstree.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/ssdt.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/strings.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/svcscan.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/symlinkscan.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/vadinfo.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/vadyarascan.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/verinfo.py -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/virtmap.py -> build/lib/volatility3/framework/plugins/windows
+creating build/lib/volatility3/framework/plugins/windows/registry
+copying volatility3/framework/plugins/windows/registry/__init__.py -> build/lib/volatility3/framework/plugins/windows/registry
+copying volatility3/framework/plugins/windows/registry/hivelist.py -> build/lib/volatility3/framework/plugins/windows/registry
+copying volatility3/framework/plugins/windows/registry/hivescan.py -> build/lib/volatility3/framework/plugins/windows/registry
+copying volatility3/framework/plugins/windows/registry/printkey.py -> build/lib/volatility3/framework/plugins/windows/registry
+copying volatility3/framework/plugins/windows/registry/userassist.py -> build/lib/volatility3/framework/plugins/windows/registry
+creating build/lib/volatility3/framework/symbols/generic
+copying volatility3/framework/symbols/generic/__init__.py -> build/lib/volatility3/framework/symbols/generic
+creating build/lib/volatility3/framework/symbols/linux
+copying volatility3/framework/symbols/linux/__init__.py -> build/lib/volatility3/framework/symbols/linux
+copying volatility3/framework/symbols/linux/bash.py -> build/lib/volatility3/framework/symbols/linux
+creating build/lib/volatility3/framework/symbols/mac
+copying volatility3/framework/symbols/mac/__init__.py -> build/lib/volatility3/framework/symbols/mac
+creating build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/__init__.py -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/pdbconv.py -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/pdbutil.py -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/versions.py -> build/lib/volatility3/framework/symbols/windows
+creating build/lib/volatility3/framework/symbols/linux/extensions
+copying volatility3/framework/symbols/linux/extensions/__init__.py -> build/lib/volatility3/framework/symbols/linux/extensions
+copying volatility3/framework/symbols/linux/extensions/bash.py -> build/lib/volatility3/framework/symbols/linux/extensions
+copying volatility3/framework/symbols/linux/extensions/elf.py -> build/lib/volatility3/framework/symbols/linux/extensions
+creating build/lib/volatility3/framework/symbols/mac/extensions
+copying volatility3/framework/symbols/mac/extensions/__init__.py -> build/lib/volatility3/framework/symbols/mac/extensions
+creating build/lib/volatility3/framework/symbols/windows/extensions
+copying volatility3/framework/symbols/windows/extensions/__init__.py -> build/lib/volatility3/framework/symbols/windows/extensions
+copying volatility3/framework/symbols/windows/extensions/kdbg.py -> build/lib/volatility3/framework/symbols/windows/extensions
+copying volatility3/framework/symbols/windows/extensions/network.py -> build/lib/volatility3/framework/symbols/windows/extensions
+copying volatility3/framework/symbols/windows/extensions/pe.py -> build/lib/volatility3/framework/symbols/windows/extensions
+copying volatility3/framework/symbols/windows/extensions/pool.py -> build/lib/volatility3/framework/symbols/windows/extensions
+copying volatility3/framework/symbols/windows/extensions/registry.py -> build/lib/volatility3/framework/symbols/windows/extensions
+copying volatility3/framework/symbols/windows/extensions/services.py -> build/lib/volatility3/framework/symbols/windows/extensions
+creating build/lib/volatility3/plugins/linux
+copying volatility3/plugins/linux/__init__.py -> build/lib/volatility3/plugins/linux
+creating build/lib/volatility3/plugins/mac
+copying volatility3/plugins/mac/__init__.py -> build/lib/volatility3/plugins/mac
+creating build/lib/volatility3/plugins/windows
+copying volatility3/plugins/windows/__init__.py -> build/lib/volatility3/plugins/windows
+copying volatility3/plugins/windows/statistics.py -> build/lib/volatility3/plugins/windows
+creating build/lib/volatility3/plugins/windows/registry
+copying volatility3/plugins/windows/registry/__init__.py -> build/lib/volatility3/plugins/windows/registry
+copying volatility3/plugins/windows/registry/certificates.py -> build/lib/volatility3/plugins/windows/registry
+running egg_info
+creating volatility3.egg-info
+writing volatility3.egg-info/PKG-INFO
+writing dependency_links to volatility3.egg-info/dependency_links.txt
+writing entry points to volatility3.egg-info/entry_points.txt
+writing requirements to volatility3.egg-info/requires.txt
+writing top-level names to volatility3.egg-info/top_level.txt
+writing manifest file 'volatility3.egg-info/SOURCES.txt'
+reading manifest file 'volatility3.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+no previously-included directories found matching 'development'
+warning: no previously-included files matching 'volatility3.*.rst' found under directory 'doc/source'
+adding license file 'LICENSE.txt'
+writing manifest file 'volatility3.egg-info/SOURCES.txt'
+copying volatility3/schemas/schema-0.1.0.json -> build/lib/volatility3/schemas
+copying volatility3/schemas/schema-2.0.0.json -> build/lib/volatility3/schemas
+copying volatility3/schemas/schema-2.1.0.json -> build/lib/volatility3/schemas
+copying volatility3/schemas/schema-4.0.0.json -> build/lib/volatility3/schemas
+copying volatility3/schemas/schema-4.1.0.json -> build/lib/volatility3/schemas
+copying volatility3/schemas/schema-6.0.0.json -> build/lib/volatility3/schemas
+copying volatility3/schemas/schema-6.1.0.json -> build/lib/volatility3/schemas
+copying volatility3/schemas/schema-6.2.0.json -> build/lib/volatility3/schemas
+copying volatility3/framework/plugins/windows/sids_and_privileges.json -> build/lib/volatility3/framework/plugins/windows
+copying volatility3/framework/plugins/windows/registry/userassist.json -> build/lib/volatility3/framework/plugins/windows/registry
+copying volatility3/framework/symbols/generic/qemu.json -> build/lib/volatility3/framework/symbols/generic
+copying volatility3/framework/symbols/linux/bash32.json -> build/lib/volatility3/framework/symbols/linux
+copying volatility3/framework/symbols/linux/bash64.json -> build/lib/volatility3/framework/symbols/linux
+copying volatility3/framework/symbols/linux/elf.json -> build/lib/volatility3/framework/symbols/linux
+copying volatility3/framework/symbols/windows/bigpools-vista-x64.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/bigpools-vista-x86.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/bigpools-win10-x64.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/bigpools-win10-x86.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/bigpools-x64.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/bigpools-x86.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/callbacks-x64.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/callbacks-x86.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/crash.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/crash64.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/kdbg.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/netscan-vista-sp12-x64.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/netscan-vista-x64.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/netscan-vista-x86.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/netscan-win10-14393-x86.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/netscan-win10-15063-x64.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/netscan-win10-15063-x86.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/netscan-win10-16299-x64.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/netscan-win10-17134-x64.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/netscan-win10-17134-x86.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/netscan-win10-17763-x64.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/netscan-win10-18363-x64.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/netscan-win10-19041-x64.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/netscan-win10-19041-x86.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/netscan-win10-x64.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/netscan-win10-x86.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/netscan-win7-x64.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/netscan-win7-x86.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/netscan-win8-x64.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/netscan-win8-x86.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/netscan-win81-x64.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/netscan-win81-x86.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/pdb.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/pe.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/poolheader-x64-win7.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/poolheader-x64.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/poolheader-x86.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/registry.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/services-vista-x64.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/services-vista-x86.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/services-win10-15063-x64.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/services-win10-15063-x86.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/services-win10-16299-x64.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/services-win10-16299-x86.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/services-win8-x64.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/services-win8-x86.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/services-xp-2003-x64.json -> build/lib/volatility3/framework/symbols/windows
+copying volatility3/framework/symbols/windows/services-xp-x86.json -> build/lib/volatility3/framework/symbols/windows
++ RPM_EC=0
+++ jobs -p
++ exit 0
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.R12NZh
++ umask 022
++ cd /home/sandipan/Desktop/fedora/volatility3-fedora-rpm
++ '[' /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64 '!=' / ']'
++ rm -rf /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64
+++ dirname /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64
++ mkdir -p /home/sandipan/rpmbuild/BUILDROOT
++ mkdir /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64
++ cd volatility3-1.0.1
++ CFLAGS='-O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -m64  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection'
++ LDFLAGS='-Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 '
++ /usr/bin/python3 setup.py install -O1 --skip-build --root /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64
+running install
+running install_lib
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3
+copying build/lib/volatility3/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/cli
+copying build/lib/volatility3/cli/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/cli
+copying build/lib/volatility3/cli/text_renderer.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/cli
+copying build/lib/volatility3/cli/volargparse.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/cli
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/cli/volshell
+copying build/lib/volatility3/cli/volshell/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/cli/volshell
+copying build/lib/volatility3/cli/volshell/generic.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/cli/volshell
+copying build/lib/volatility3/cli/volshell/linux.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/cli/volshell
+copying build/lib/volatility3/cli/volshell/mac.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/cli/volshell
+copying build/lib/volatility3/cli/volshell/windows.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/cli/volshell
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework
+copying build/lib/volatility3/framework/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework
+copying build/lib/volatility3/framework/exceptions.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/automagic
+copying build/lib/volatility3/framework/automagic/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/automagic
+copying build/lib/volatility3/framework/automagic/construct_layers.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/automagic
+copying build/lib/volatility3/framework/automagic/linux.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/automagic
+copying build/lib/volatility3/framework/automagic/mac.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/automagic
+copying build/lib/volatility3/framework/automagic/pdbscan.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/automagic
+copying build/lib/volatility3/framework/automagic/stacker.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/automagic
+copying build/lib/volatility3/framework/automagic/symbol_cache.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/automagic
+copying build/lib/volatility3/framework/automagic/symbol_finder.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/automagic
+copying build/lib/volatility3/framework/automagic/windows.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/automagic
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/configuration
+copying build/lib/volatility3/framework/configuration/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/configuration
+copying build/lib/volatility3/framework/configuration/requirements.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/configuration
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/constants
+copying build/lib/volatility3/framework/constants/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/constants
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/constants/linux
+copying build/lib/volatility3/framework/constants/linux/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/constants/linux
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/constants/windows
+copying build/lib/volatility3/framework/constants/windows/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/constants/windows
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/contexts
+copying build/lib/volatility3/framework/contexts/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/contexts
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/interfaces
+copying build/lib/volatility3/framework/interfaces/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/interfaces
+copying build/lib/volatility3/framework/interfaces/automagic.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/interfaces
+copying build/lib/volatility3/framework/interfaces/configuration.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/interfaces
+copying build/lib/volatility3/framework/interfaces/context.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/interfaces
+copying build/lib/volatility3/framework/interfaces/layers.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/interfaces
+copying build/lib/volatility3/framework/interfaces/objects.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/interfaces
+copying build/lib/volatility3/framework/interfaces/plugins.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/interfaces
+copying build/lib/volatility3/framework/interfaces/renderers.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/interfaces
+copying build/lib/volatility3/framework/interfaces/symbols.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/interfaces
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers
+copying build/lib/volatility3/framework/layers/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers
+copying build/lib/volatility3/framework/layers/crash.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers
+copying build/lib/volatility3/framework/layers/elf.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers
+copying build/lib/volatility3/framework/layers/intel.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers
+copying build/lib/volatility3/framework/layers/lime.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers
+copying build/lib/volatility3/framework/layers/linear.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers
+copying build/lib/volatility3/framework/layers/msf.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers
+copying build/lib/volatility3/framework/layers/physical.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers
+copying build/lib/volatility3/framework/layers/qemu.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers
+copying build/lib/volatility3/framework/layers/registry.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers
+copying build/lib/volatility3/framework/layers/resources.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers
+copying build/lib/volatility3/framework/layers/segmented.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers
+copying build/lib/volatility3/framework/layers/vmware.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers/codecs
+copying build/lib/volatility3/framework/layers/codecs/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers/codecs
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers/scanners
+copying build/lib/volatility3/framework/layers/scanners/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers/scanners
+copying build/lib/volatility3/framework/layers/scanners/multiregexp.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers/scanners
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/objects
+copying build/lib/volatility3/framework/objects/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/objects
+copying build/lib/volatility3/framework/objects/templates.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/objects
+copying build/lib/volatility3/framework/objects/utility.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/objects
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins
+copying build/lib/volatility3/framework/plugins/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins
+copying build/lib/volatility3/framework/plugins/banners.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins
+copying build/lib/volatility3/framework/plugins/configwriter.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins
+copying build/lib/volatility3/framework/plugins/frameworkinfo.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins
+copying build/lib/volatility3/framework/plugins/isfinfo.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins
+copying build/lib/volatility3/framework/plugins/layerwriter.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins
+copying build/lib/volatility3/framework/plugins/timeliner.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins
+copying build/lib/volatility3/framework/plugins/yarascan.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux
+copying build/lib/volatility3/framework/plugins/linux/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux
+copying build/lib/volatility3/framework/plugins/linux/bash.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux
+copying build/lib/volatility3/framework/plugins/linux/check_afinfo.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux
+copying build/lib/volatility3/framework/plugins/linux/check_creds.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux
+copying build/lib/volatility3/framework/plugins/linux/check_idt.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux
+copying build/lib/volatility3/framework/plugins/linux/check_modules.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux
+copying build/lib/volatility3/framework/plugins/linux/check_syscall.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux
+copying build/lib/volatility3/framework/plugins/linux/elfs.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux
+copying build/lib/volatility3/framework/plugins/linux/keyboard_notifiers.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux
+copying build/lib/volatility3/framework/plugins/linux/lsmod.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux
+copying build/lib/volatility3/framework/plugins/linux/lsof.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux
+copying build/lib/volatility3/framework/plugins/linux/malfind.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux
+copying build/lib/volatility3/framework/plugins/linux/proc.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux
+copying build/lib/volatility3/framework/plugins/linux/pslist.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux
+copying build/lib/volatility3/framework/plugins/linux/pstree.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux
+copying build/lib/volatility3/framework/plugins/linux/tty_check.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac
+copying build/lib/volatility3/framework/plugins/mac/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac
+copying build/lib/volatility3/framework/plugins/mac/bash.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac
+copying build/lib/volatility3/framework/plugins/mac/check_syscall.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac
+copying build/lib/volatility3/framework/plugins/mac/check_sysctl.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac
+copying build/lib/volatility3/framework/plugins/mac/check_trap_table.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac
+copying build/lib/volatility3/framework/plugins/mac/ifconfig.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac
+copying build/lib/volatility3/framework/plugins/mac/kauth_listeners.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac
+copying build/lib/volatility3/framework/plugins/mac/kauth_scopes.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac
+copying build/lib/volatility3/framework/plugins/mac/kevents.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac
+copying build/lib/volatility3/framework/plugins/mac/list_files.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac
+copying build/lib/volatility3/framework/plugins/mac/lsmod.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac
+copying build/lib/volatility3/framework/plugins/mac/lsof.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac
+copying build/lib/volatility3/framework/plugins/mac/malfind.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac
+copying build/lib/volatility3/framework/plugins/mac/mount.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac
+copying build/lib/volatility3/framework/plugins/mac/netstat.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac
+copying build/lib/volatility3/framework/plugins/mac/proc_maps.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac
+copying build/lib/volatility3/framework/plugins/mac/psaux.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac
+copying build/lib/volatility3/framework/plugins/mac/pslist.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac
+copying build/lib/volatility3/framework/plugins/mac/pstree.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac
+copying build/lib/volatility3/framework/plugins/mac/socket_filters.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac
+copying build/lib/volatility3/framework/plugins/mac/timers.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac
+copying build/lib/volatility3/framework/plugins/mac/trustedbsd.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac
+copying build/lib/volatility3/framework/plugins/mac/vfsevents.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/bigpools.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/cachedump.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/callbacks.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/cmdline.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/dlllist.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/driverirp.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/driverscan.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/dumpfiles.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/envars.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/filescan.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/getservicesids.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/getsids.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/handles.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/hashdump.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/info.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/lsadump.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/malfind.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/memmap.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/modscan.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/modules.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/mutantscan.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/netscan.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/poolscanner.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/privileges.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/pslist.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/psscan.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/pstree.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/ssdt.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/strings.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/svcscan.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/symlinkscan.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/vadinfo.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/vadyarascan.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/verinfo.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+copying build/lib/volatility3/framework/plugins/windows/virtmap.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/registry
+copying build/lib/volatility3/framework/plugins/windows/registry/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/registry
+copying build/lib/volatility3/framework/plugins/windows/registry/hivelist.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/registry
+copying build/lib/volatility3/framework/plugins/windows/registry/hivescan.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/registry
+copying build/lib/volatility3/framework/plugins/windows/registry/printkey.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/registry
+copying build/lib/volatility3/framework/plugins/windows/registry/userassist.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/registry
+copying build/lib/volatility3/framework/plugins/windows/registry/userassist.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/registry
+copying build/lib/volatility3/framework/plugins/windows/sids_and_privileges.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/renderers
+copying build/lib/volatility3/framework/renderers/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/renderers
+copying build/lib/volatility3/framework/renderers/conversion.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/renderers
+copying build/lib/volatility3/framework/renderers/format_hints.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/renderers
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols
+copying build/lib/volatility3/framework/symbols/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols
+copying build/lib/volatility3/framework/symbols/intermed.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols
+copying build/lib/volatility3/framework/symbols/metadata.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols
+copying build/lib/volatility3/framework/symbols/native.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols
+copying build/lib/volatility3/framework/symbols/wrappers.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/generic
+copying build/lib/volatility3/framework/symbols/generic/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/generic
+copying build/lib/volatility3/framework/symbols/generic/qemu.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/generic
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/linux
+copying build/lib/volatility3/framework/symbols/linux/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/linux
+copying build/lib/volatility3/framework/symbols/linux/bash.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/linux
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/linux/extensions
+copying build/lib/volatility3/framework/symbols/linux/extensions/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/linux/extensions
+copying build/lib/volatility3/framework/symbols/linux/extensions/bash.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/linux/extensions
+copying build/lib/volatility3/framework/symbols/linux/extensions/elf.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/linux/extensions
+copying build/lib/volatility3/framework/symbols/linux/bash32.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/linux
+copying build/lib/volatility3/framework/symbols/linux/bash64.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/linux
+copying build/lib/volatility3/framework/symbols/linux/elf.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/linux
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/mac
+copying build/lib/volatility3/framework/symbols/mac/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/mac
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/mac/extensions
+copying build/lib/volatility3/framework/symbols/mac/extensions/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/mac/extensions
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/pdbconv.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/pdbutil.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/versions.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows/extensions
+copying build/lib/volatility3/framework/symbols/windows/extensions/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows/extensions
+copying build/lib/volatility3/framework/symbols/windows/extensions/kdbg.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows/extensions
+copying build/lib/volatility3/framework/symbols/windows/extensions/network.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows/extensions
+copying build/lib/volatility3/framework/symbols/windows/extensions/pe.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows/extensions
+copying build/lib/volatility3/framework/symbols/windows/extensions/pool.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows/extensions
+copying build/lib/volatility3/framework/symbols/windows/extensions/registry.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows/extensions
+copying build/lib/volatility3/framework/symbols/windows/extensions/services.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows/extensions
+copying build/lib/volatility3/framework/symbols/windows/bigpools-vista-x64.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/bigpools-vista-x86.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/bigpools-win10-x64.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/bigpools-win10-x86.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/bigpools-x64.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/bigpools-x86.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/callbacks-x64.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/callbacks-x86.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/crash.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/crash64.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/kdbg.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/netscan-vista-sp12-x64.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/netscan-vista-x64.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/netscan-vista-x86.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/netscan-win10-14393-x86.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/netscan-win10-15063-x64.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/netscan-win10-15063-x86.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/netscan-win10-16299-x64.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/netscan-win10-17134-x64.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/netscan-win10-17134-x86.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/netscan-win10-17763-x64.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/netscan-win10-18363-x64.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/netscan-win10-19041-x64.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/netscan-win10-19041-x86.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/netscan-win10-x64.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/netscan-win10-x86.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/netscan-win7-x64.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/netscan-win7-x86.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/netscan-win8-x64.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/netscan-win8-x86.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/netscan-win81-x64.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/netscan-win81-x86.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/pdb.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/pe.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/poolheader-x64-win7.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/poolheader-x64.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/poolheader-x86.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/registry.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/services-vista-x64.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/services-vista-x86.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/services-win10-15063-x64.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/services-win10-15063-x86.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/services-win10-16299-x64.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/services-win10-16299-x86.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/services-win8-x64.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/services-win8-x86.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/services-xp-2003-x64.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+copying build/lib/volatility3/framework/symbols/windows/services-xp-x86.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/plugins
+copying build/lib/volatility3/plugins/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/plugins
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/plugins/linux
+copying build/lib/volatility3/plugins/linux/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/plugins/linux
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/plugins/mac
+copying build/lib/volatility3/plugins/mac/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/plugins/mac
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/plugins/windows
+copying build/lib/volatility3/plugins/windows/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/plugins/windows
+copying build/lib/volatility3/plugins/windows/statistics.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/plugins/windows
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/plugins/windows/registry
+copying build/lib/volatility3/plugins/windows/registry/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/plugins/windows/registry
+copying build/lib/volatility3/plugins/windows/registry/certificates.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/plugins/windows/registry
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/schemas
+copying build/lib/volatility3/schemas/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/schemas
+copying build/lib/volatility3/schemas/schema-0.1.0.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/schemas
+copying build/lib/volatility3/schemas/schema-2.0.0.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/schemas
+copying build/lib/volatility3/schemas/schema-2.1.0.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/schemas
+copying build/lib/volatility3/schemas/schema-4.0.0.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/schemas
+copying build/lib/volatility3/schemas/schema-4.1.0.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/schemas
+copying build/lib/volatility3/schemas/schema-6.0.0.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/schemas
+copying build/lib/volatility3/schemas/schema-6.1.0.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/schemas
+copying build/lib/volatility3/schemas/schema-6.2.0.json -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/schemas
+creating /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/symbols
+copying build/lib/volatility3/symbols/__init__.py -> /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/symbols
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/cli/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/cli/text_renderer.py to text_renderer.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/cli/volargparse.py to volargparse.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/cli/volshell/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/cli/volshell/generic.py to generic.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/cli/volshell/linux.py to linux.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/cli/volshell/mac.py to mac.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/cli/volshell/windows.py to windows.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/exceptions.py to exceptions.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/automagic/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/automagic/construct_layers.py to construct_layers.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/automagic/linux.py to linux.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/automagic/mac.py to mac.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/automagic/pdbscan.py to pdbscan.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/automagic/stacker.py to stacker.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/automagic/symbol_cache.py to symbol_cache.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/automagic/symbol_finder.py to symbol_finder.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/automagic/windows.py to windows.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/configuration/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/configuration/requirements.py to requirements.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/constants/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/constants/linux/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/constants/windows/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/contexts/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/interfaces/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/interfaces/automagic.py to automagic.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/interfaces/configuration.py to configuration.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/interfaces/context.py to context.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/interfaces/layers.py to layers.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/interfaces/objects.py to objects.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/interfaces/plugins.py to plugins.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/interfaces/renderers.py to renderers.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/interfaces/symbols.py to symbols.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers/crash.py to crash.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers/elf.py to elf.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers/intel.py to intel.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers/lime.py to lime.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers/linear.py to linear.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers/msf.py to msf.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers/physical.py to physical.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers/qemu.py to qemu.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers/registry.py to registry.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers/resources.py to resources.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers/segmented.py to segmented.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers/vmware.py to vmware.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers/codecs/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers/scanners/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/layers/scanners/multiregexp.py to multiregexp.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/objects/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/objects/templates.py to templates.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/objects/utility.py to utility.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/banners.py to banners.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/configwriter.py to configwriter.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/frameworkinfo.py to frameworkinfo.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/isfinfo.py to isfinfo.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/layerwriter.py to layerwriter.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/timeliner.py to timeliner.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/yarascan.py to yarascan.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux/bash.py to bash.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux/check_afinfo.py to check_afinfo.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux/check_creds.py to check_creds.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux/check_idt.py to check_idt.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux/check_modules.py to check_modules.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux/check_syscall.py to check_syscall.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux/elfs.py to elfs.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux/keyboard_notifiers.py to keyboard_notifiers.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux/lsmod.py to lsmod.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux/lsof.py to lsof.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux/malfind.py to malfind.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux/proc.py to proc.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux/pslist.py to pslist.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux/pstree.py to pstree.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/linux/tty_check.py to tty_check.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac/bash.py to bash.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac/check_syscall.py to check_syscall.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac/check_sysctl.py to check_sysctl.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac/check_trap_table.py to check_trap_table.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac/ifconfig.py to ifconfig.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac/kauth_listeners.py to kauth_listeners.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac/kauth_scopes.py to kauth_scopes.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac/kevents.py to kevents.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac/list_files.py to list_files.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac/lsmod.py to lsmod.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac/lsof.py to lsof.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac/malfind.py to malfind.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac/mount.py to mount.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac/netstat.py to netstat.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac/proc_maps.py to proc_maps.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac/psaux.py to psaux.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac/pslist.py to pslist.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac/pstree.py to pstree.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac/socket_filters.py to socket_filters.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac/timers.py to timers.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac/trustedbsd.py to trustedbsd.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/mac/vfsevents.py to vfsevents.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/bigpools.py to bigpools.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/cachedump.py to cachedump.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/callbacks.py to callbacks.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/cmdline.py to cmdline.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/dlllist.py to dlllist.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/driverirp.py to driverirp.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/driverscan.py to driverscan.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/dumpfiles.py to dumpfiles.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/envars.py to envars.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/filescan.py to filescan.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/getservicesids.py to getservicesids.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/getsids.py to getsids.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/handles.py to handles.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/hashdump.py to hashdump.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/info.py to info.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/lsadump.py to lsadump.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/malfind.py to malfind.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/memmap.py to memmap.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/modscan.py to modscan.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/modules.py to modules.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/mutantscan.py to mutantscan.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/netscan.py to netscan.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/poolscanner.py to poolscanner.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/privileges.py to privileges.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/pslist.py to pslist.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/psscan.py to psscan.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/pstree.py to pstree.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/ssdt.py to ssdt.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/strings.py to strings.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/svcscan.py to svcscan.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/symlinkscan.py to symlinkscan.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/vadinfo.py to vadinfo.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/vadyarascan.py to vadyarascan.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/verinfo.py to verinfo.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/virtmap.py to virtmap.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/registry/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/registry/hivelist.py to hivelist.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/registry/hivescan.py to hivescan.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/registry/printkey.py to printkey.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/plugins/windows/registry/userassist.py to userassist.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/renderers/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/renderers/conversion.py to conversion.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/renderers/format_hints.py to format_hints.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/intermed.py to intermed.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/metadata.py to metadata.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/native.py to native.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/wrappers.py to wrappers.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/generic/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/linux/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/linux/bash.py to bash.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/linux/extensions/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/linux/extensions/bash.py to bash.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/linux/extensions/elf.py to elf.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/mac/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/mac/extensions/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows/pdbconv.py to pdbconv.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows/pdbutil.py to pdbutil.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows/versions.py to versions.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows/extensions/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows/extensions/kdbg.py to kdbg.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows/extensions/network.py to network.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows/extensions/pe.py to pe.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows/extensions/pool.py to pool.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows/extensions/registry.py to registry.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/framework/symbols/windows/extensions/services.py to services.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/plugins/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/plugins/linux/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/plugins/mac/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/plugins/windows/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/plugins/windows/statistics.py to statistics.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/plugins/windows/registry/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/plugins/windows/registry/certificates.py to certificates.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/schemas/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3/symbols/__init__.py to __init__.cpython-310.pyc
+writing byte-compilation script '/tmp/tmp32cuf5o6.py'
+/usr/bin/python3 -Wignore:The distutils package is deprecated and slated for removal in Python 3.12. Use setuptools or check PEP 632 for potential alternatives:DeprecationWarning /tmp/tmp32cuf5o6.py
+removing /tmp/tmp32cuf5o6.py
+running install_egg_info
+running egg_info
+writing volatility3.egg-info/PKG-INFO
+writing dependency_links to volatility3.egg-info/dependency_links.txt
+writing entry points to volatility3.egg-info/entry_points.txt
+writing requirements to volatility3.egg-info/requires.txt
+writing top-level names to volatility3.egg-info/top_level.txt
+reading manifest file 'volatility3.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+no previously-included directories found matching 'development'
+warning: no previously-included files matching 'volatility3.*.rst' found under directory 'doc/source'
+adding license file 'LICENSE.txt'
+writing manifest file 'volatility3.egg-info/SOURCES.txt'
+Copying volatility3.egg-info to /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10/site-packages/volatility3-1.0.1-py3.10.egg-info
+running install_scripts
+Installing vol script to /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/bin
+Installing volshell script to /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/bin
++ rm -rfv /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/bin/__pycache__
++ mv /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/bin/vol /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/bin/vol3
++ mv /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/bin/volshell /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/bin/volshell3
++ ln -s vol3 /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/bin/volatility3
++ ln -s volshell3 /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/bin/volshell
++ ln -s vol3 /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/bin/vol
++ ln -s volatility3 /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/bin/volatility
++ /usr/bin/find-debuginfo -j12 --strict-build-id -m -i --build-id-seed 1.0.1-1.fc35 --unique-debug-suffix -1.0.1-1.fc35.x86_64 --unique-debug-src-base python-volatility3-1.0.1-1.fc35.x86_64 --run-dwz --dwz-low-mem-die-limit 10000000 --dwz-max-die-limit 110000000 -S debugsourcefiles.list /home/sandipan/Desktop/fedora/volatility3-fedora-rpm/volatility3-1.0.1
+find: 'debug': No such file or directory
++ '[' '%{buildarch}' = noarch ']'
++ QA_CHECK_RPATHS=1
++ case "${QA_CHECK_RPATHS:-}" in
++ /usr/lib/rpm/check-rpaths
++ /usr/lib/rpm/check-buildroot
++ /usr/lib/rpm/redhat/brp-ldconfig
++ /usr/lib/rpm/brp-compress
++ /usr/lib/rpm/redhat/brp-strip-lto /usr/bin/strip
++ /usr/lib/rpm/brp-strip-static-archive /usr/bin/strip
++ /usr/lib/rpm/check-rpaths
++ /usr/lib/rpm/redhat/brp-mangle-shebangs
++ /usr/lib/rpm/redhat/brp-python-bytecompile '' 1 0
+Bytecompiling .py files below /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/lib/python3.10 using python3.10
++ /usr/lib/rpm/redhat/brp-python-hardlink
+Processing files: python3-volatility3-1.0.1-1.fc35.noarch
+Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.y6xAUH
++ umask 022
++ cd /home/sandipan/Desktop/fedora/volatility3-fedora-rpm
++ cd volatility3-1.0.1
++ DOCDIR=/home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/share/doc/python3-volatility3
++ export LC_ALL=C
++ LC_ALL=C
++ export DOCDIR
++ /usr/bin/mkdir -p /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/share/doc/python3-volatility3
++ cp -pr README.md /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/share/doc/python3-volatility3
++ RPM_EC=0
+++ jobs -p
++ exit 0
+Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.ifO9MQ
++ umask 022
++ cd /home/sandipan/Desktop/fedora/volatility3-fedora-rpm
++ cd volatility3-1.0.1
++ LICENSEDIR=/home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/share/licenses/python3-volatility3
++ export LC_ALL=C
++ LC_ALL=C
++ export LICENSEDIR
++ /usr/bin/mkdir -p /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/share/licenses/python3-volatility3
++ cp -pr LICENSE.txt /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64/usr/share/licenses/python3-volatility3
++ RPM_EC=0
+++ jobs -p
++ exit 0
+Provides: python-volatility3 = 1.0.1-1.fc35 python3-volatility3 = 1.0.1-1.fc35 python3.10-volatility3 = 1.0.1-1.fc35 python3.10dist(volatility3) = 1.0.1 python3dist(volatility3) = 1.0.1 volatility3 = 1.0.1-1.fc35
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PartialHardlinkSets) <= 4.0.4-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires: /usr/bin/python3 python(abi) = 3.10 python3.10dist(pefile)
+Recommends: python3dist(capstone) python3dist(jsonschema) python3dist(yara-python)
+Checking for unpackaged file(s): /usr/lib/rpm/check-files /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64
+Wrote: /home/sandipan/Desktop/fedora/volatility3-fedora-rpm/python-volatility3-1.0.1-1.fc35.src.rpm
+Wrote: /home/sandipan/Desktop/fedora/volatility3-fedora-rpm/noarch/python3-volatility3-1.0.1-1.fc35.noarch.rpm
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.t1Ka4F
++ umask 022
++ cd /home/sandipan/Desktop/fedora/volatility3-fedora-rpm
++ cd volatility3-1.0.1
++ /usr/bin/rm -rf /home/sandipan/rpmbuild/BUILDROOT/python-volatility3-1.0.1-1.fc35.x86_64
++ RPM_EC=0
+++ jobs -p
++ exit 0
